@@ -15,11 +15,14 @@ return new class extends Migration
     {
         Schema::create('detail_buyers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->float('price');
-            $table->integer('stocks');
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('category');
+            $table->integer('qty');
+            $table->float('total_price');
+            $table->unsignedBigInteger('buyers_id');
+            $table->foreign('buyers_id')->references('id')->on('buyers');
+            $table->unsignedBigInteger('products_id');
+            $table->foreign('products_id')->references('id')->on('products');
+            $table->unsignedBigInteger('transactions_id');
+            $table->foreign('transactions_id')->references('id')->on('transactions');
             $table->timestamps();
         });
     }
