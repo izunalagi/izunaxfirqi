@@ -15,7 +15,9 @@
                         @endif
 
                         {{-- {{ __('You are logged in!') }} --}}
-                        You are a user
+                        <div class="card-body">
+                            You are a staff
+                        </div>
                     </div>
                 </div>
             </div>
