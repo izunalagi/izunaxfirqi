@@ -26,5 +26,12 @@ class HomeController extends Controller
         return view('home');
     }
 
-    
+    public function staff()
+    {
+        return view('staff');
+    }
+    public function owner()
+    {
+        return view('owner');
+    }
 }

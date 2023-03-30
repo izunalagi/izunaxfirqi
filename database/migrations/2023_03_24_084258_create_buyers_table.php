@@ -17,8 +17,8 @@ return new class extends Migration
         Schema::create('buyers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer(column:('age'))->nullable();
-            $table->text(column:('address'));
+            $table->integer('age')->nullable();
+            $table->text('address');
             $table->timestamps();
         });
     }
